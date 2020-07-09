@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/App.js"
+    "dev": "node src/App.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
