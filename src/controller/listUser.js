@@ -1,7 +1,10 @@
-const indexUser = (req, res) => {
-  const name = req.params;
+const schemaUser = require('../database/modelUser');
 
-  res.json(name);
+const indexUser = async (req, res) => {
+  await schemaUser.find({}, (err, data) => {
+    if (err) { return res.status(500).send('error'); }
+    res.json(data);
+  });
 };
 
 module.exports = indexUser;
